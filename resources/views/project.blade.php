@@ -12,7 +12,7 @@
 
 {{-- contentの内容--}}
 @section('content') 
-@include('content')
+
 @endsection
 
 {{-- footerの内容--}}
