@@ -8,7 +8,7 @@
     <p>ネットで相席</p>
     <p>日本初の1対1に特化した相席飲み会サービスです。</p>
     <a class="btn btn-primary btn-lg" href="#" role="button">サービスについての詳細</a>
-    </div>
+</div>
     <div class="card" style="width: 18rem;">
     <img src="..." class="card-img-top" alt="...">
     <div class="card-body">
