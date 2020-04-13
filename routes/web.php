@@ -24,3 +24,7 @@ Route::get('/inquiry', function () {
 Route::get('/project', function () {
     return view('project');
 });
+
+Route::get('/detail', function () {
+    return view('detail');
+});
