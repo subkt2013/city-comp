@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PostsController@index')->name('top');
+
+Route::resource('posts','PostsController',['only' => ['create', 'store']]);
 
 Route::get('/inquiry', function () {
     return view('inquiry');
@@ -28,3 +28,4 @@ Route::get('/project', function () {
 Route::get('/detail', function () {
     return view('detail');
 });
+
