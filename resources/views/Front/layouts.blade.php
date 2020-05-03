@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Laravel BBS</title>
-
+    <meta name="description" content="世界一やさしい掲示板です。ここはどう〇つの森のように穏やかです。">
+    <title>やさしい掲示板</title>
     <link
         rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -14,8 +14,8 @@
 <body>
     <header class="navbar navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('') }}">
-                Laravel BBS
+            <a class="navbar-brand" href="{{ route('posts.create') }}">
+                やさしい掲示板
             </a>
         </div>
     </header>
