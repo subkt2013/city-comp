@@ -23,10 +23,10 @@
                 </div>
             </div>
         @endforeach
-            <p class="card-text">
-                {!! nl2br(e(Str::limit($post->body, 200))) !!}
-            </p>
 
+            <div class="d-flex justify-content-center mb-5">
+                {{ $posts->links() }}
+            </div>
             <a class="card-link" href="{{ route('posts.show', ['post' => $post]) }}">
                 続きを読む
             </a>
