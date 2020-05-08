@@ -14,7 +14,7 @@
 <body>
     <header class="navbar navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('posts.create') }}">
+            <a class="navbar-brand" href="{{ route('top') }}">
                 やさしい掲示板
             </a>
         </div>

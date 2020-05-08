@@ -19,6 +19,8 @@ Route::resource('posts','PostsController',['only' => ['create', 'store','show','
 
 Route::resource('comments', 'CommentsController', ['only' => ['store']]);
 
+Auth::routes();
+
 
 /* 前のテスト開発
 Route::get('/inquiry', function () {
@@ -33,3 +35,6 @@ Route::get('/detail', function () {
     return view('detail');
 });
 */
+
+//authのライブラリを仕様したときの/homeを封印
+//Route::get('/home', 'HomeController@index')->name('home');
