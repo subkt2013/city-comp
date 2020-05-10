@@ -40,14 +40,9 @@
 
         @foreach ($posts as $post)
             <div class="card ">
-                <div class="card-header">
+                <a class="card-body" href="{{ route('posts.show', ['post' => $post]) }}">
                     {{$post->title}}
-                </div>
-                <div class="card-body">
-                    <p class="card-text">
-                    {{$post -> body}}                    
-                    </p>
-                </div>
+                </a>
                 <div class="card-footer">
                     投稿日時{{$post->created_at}}
                     コメント数{{$post->comments->count()}}
@@ -58,9 +53,6 @@
             <div class="d-flex justify-content-center mb-5">
                 {{ $posts->links() }}
             </div>
-            <a class="card-link" href="{{ route('posts.show', ['post' => $post]) }}">
-                続きを読む
-            </a>
 </div>
 
 @endsection('content')
