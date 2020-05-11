@@ -21,7 +21,7 @@
                                 {{ $comment->created_at->format('Y.m.d H:i') }}
                             </time>
                             <p class="mt-2">
-                                
+                                {{ Auth::user()->name }}
                             </p>
                             <p class="mt-2">
                                 {!! nl2br(e($comment->body)) !!}
