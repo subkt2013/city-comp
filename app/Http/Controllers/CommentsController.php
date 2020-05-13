@@ -12,6 +12,7 @@ class CommentsController extends Controller
         $params = $request->validate([
             'post_id' => 'required|exists:posts,id',
             'body' => 'required|max:2000',
+            'commenter_name' => 'required|nullable',
         ]);
 
         $post = Post::findOrFail($params['post_id']);

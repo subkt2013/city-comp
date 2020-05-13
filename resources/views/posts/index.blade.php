@@ -46,6 +46,7 @@
                 <div class="card-footer">
                     投稿日時{{$post->created_at}}
                     コメント数{{$post->comments->count()}}
+                    投稿者(まずpostテーブルにカラムを追加し、コントローラいじる)
                 </div>
             </div>
         @endforeach

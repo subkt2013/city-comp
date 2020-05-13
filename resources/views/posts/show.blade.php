@@ -21,7 +21,7 @@
                                 {{ $comment->created_at->format('Y.m.d H:i') }}
                             </time>
                             <p class="mt-2">
-                                {{ Auth::user()->name }}
+                                {{ $comment->commenter_name }}
                             </p>
                             <p class="mt-2">
                                 {!! nl2br(e($comment->body)) !!}
@@ -38,6 +38,11 @@
             name="post_id"
             type="hidden"
             value="{{ $post->id }}"
+            >
+            <input
+            name="commenter_name"
+            type="hidden"
+            value="{{ Auth::user()->name  }}"
             >
 
             <div class="form-group">

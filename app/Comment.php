@@ -8,6 +8,7 @@ class Comment extends Model
 {
     protected $fillable = [
         'body',
+        'commenter_name',
     ];
 
     public function post(){
