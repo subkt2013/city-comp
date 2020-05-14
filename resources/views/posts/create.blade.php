@@ -45,6 +45,12 @@
                             </div>
                         @endif
                     </div>
+                    <input
+                            id="contributor_name"
+                            name="contributor_name"
+                            value="{{ Auth::user()->name }}"
+                            type="hidden"
+                    >
 
                     <div class="mt-5">
                         <a class="btn btn-secondary" href="{{ route('top') }}">

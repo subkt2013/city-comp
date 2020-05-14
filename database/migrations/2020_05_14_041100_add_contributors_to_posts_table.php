@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddUserIdToUsersTable extends Migration
+class AddContributorsToPostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddUserIdToUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('users_id')->after('id');//カラム追加
+        Schema::table('posts', function (Blueprint $table) {
+            $table->string('contributor_name')->after('id');
         });
     }
 
@@ -25,8 +25,8 @@ class AddUserIdToUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('users_id');
+        Schema::table('posts', function (Blueprint $table) {
+            //
         });
     }
 }

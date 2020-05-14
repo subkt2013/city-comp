@@ -25,6 +25,7 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         $params = $request->validate([
+            'contributor_name' => 'required',
             'title' => 'required|unique:posts|max:255',
             'body' => 'required',
         ]);
@@ -55,6 +56,7 @@ class PostsController extends Controller
 public function update($post_id, Request $request)
 {
     $params = $request->validate([
+        'contributor_name' => 'required',
         'title' => 'required|max:50',
         'body' => 'required|max:2000',
     ]);

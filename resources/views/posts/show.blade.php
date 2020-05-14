@@ -32,6 +32,18 @@
                     @endforelse
                 </section>
             </div>
+        @guest
+        <div class="mb-4">
+            <a href="{{ route('login') }}" class="btn btn-primary">
+                {{ __('Login') }}
+            </a>
+            @if (Route::has('register'))
+            <a href="{{ route('register') }}" class="btn btn-primary">
+                {{ __('Register') }}
+            </a>
+            @endif
+        </div>
+        @else
         <form class="mb-4" method="POST" action="{{ route('comments.store') }}">
             @csrf
             <input
@@ -69,5 +81,7 @@
                 </button>
             </div>
         </form>
+
+        @endguest
     </div>
 @endsection
