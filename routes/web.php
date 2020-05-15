@@ -15,6 +15,18 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PostsController@index')->name('top');
 
+//各スレッドへのパス設定
+
+Route::group(['prefix' => '/nba'],function(){
+
+    Route::get('/', 'PostsNBAController@index')->name('nba');
+
+    Route::resource('/posts','PostsNBAController',['only' => ['create', 'store','show','edit','update','destroy']]);
+
+    Route::resource('/comments', 'CommentsController', ['only' => ['store']]);
+
+});
+
 Route::resource('posts','PostsController',['only' => ['create', 'store','show','edit','update','destroy']]);
 
 Route::resource('comments', 'CommentsController', ['only' => ['store']]);
