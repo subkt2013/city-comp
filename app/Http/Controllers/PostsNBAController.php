@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\PostNBA;
 
 
 class PostsNBAController extends Controller
@@ -12,14 +13,14 @@ class PostsNBAController extends Controller
 
     public function index()
     {
-        $posts = Post::with(['comments'])->orderBy('created_at', 'desc')->paginate(10);
+        $posts = PostNBA::with(['comments_nba'])->orderBy('created_at', 'desc')->paginate(10);
 
         return view('posts.nba.index',['posts'=>$posts]);
     }
 
     public function create()
     {
-        return view('posts.create');
+        return view('posts.nba.create');
     }
 
     public function store(Request $request)
@@ -30,25 +31,25 @@ class PostsNBAController extends Controller
             'body' => 'required',
         ]);
 
-        Post::create($params);
+        PostNBA::create($params);
 
-        return redirect()->route('top');
+        return redirect()->route('nba');
     }
 
     public function show($post_id)
     {
-        $post = Post::findOrFail($post_id);
+        $post = PostNBA::findOrFail($post_id);
 
-        return view('posts.show', [
+        return view('posts.nba.show', [
             'post' => $post,
         ]);
     }
 
     public function edit($post_id)
 {
-    $post = Post::findOrFail($post_id);
+    $post = PostNBA::findOrFail($post_id);
 
-    return view('posts.edit', [
+    return view('posts.nba.edit', [
         'post' => $post,
     ]);
 }
@@ -61,22 +62,22 @@ public function update($post_id, Request $request)
         'body' => 'required|max:2000',
     ]);
 
-    $post = Post::findOrFail($post_id);
+    $post = PostNBA::findOrFail($post_id);
     $post->fill($params)->save();
 
-    return redirect()->route('posts.show', ['post' => $post]);
+    return redirect()->route('posts.nba.show', ['post' => $post]);
 }
 
 public function destroy($post_id)
 {
-    $post = Post::findOrFail($post_id);
+    $post = PostNBA::findOrFail($post_id);
 
     \DB::transaction(function () use ($post) {
         $post->comments()->delete();
         $post->delete();
     });
 
-    return redirect()->route('top');
+    return redirect()->route('nba');
 }
 
 }

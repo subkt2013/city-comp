@@ -7,7 +7,7 @@
                 投稿の編集
             </h1>
 
-            <form method="POST" action="{{ route('posts.update', ['post' => $post]) }}">
+            <form method="POST" action="{{ route('posts.nba.update', ['post' => $post]) }}">
                 @csrf
                 @method('PUT')
 
@@ -49,7 +49,7 @@
                     </div>
 
                     <div class="mt-5">
-                        <a class="btn btn-secondary" href="{{ route('posts.show', ['post' => $post]) }}">
+                        <a class="btn btn-secondary" href="{{ route('posts.nba.show', ['post' => $post]) }}">
                             キャンセル
                         </a>
 

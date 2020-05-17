@@ -23,7 +23,7 @@ Route::group(['prefix' => '/nba'],function(){
 
     Route::resource('/posts','PostsNBAController',['only' => ['create', 'store','show','edit','update','destroy']]);
 
-    Route::resource('/comments', 'CommentsController', ['only' => ['store']]);
+    Route::resource('/comments', 'CommentsNBAController', ['only' => ['store']]);
 
 });
 

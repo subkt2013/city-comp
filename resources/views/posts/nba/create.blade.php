@@ -6,7 +6,7 @@
             <h1 class="h5 mb-4">
                 投稿の新規作成
             </h1>
-            <form method="POST" action="{{ route('posts.store') }}">
+            <form method="POST" action="{{ route('posts.nba.store') }}">
                 @csrf
 
                 <fieldset class="mb-4">
@@ -53,7 +53,7 @@
                     >
 
                     <div class="mt-5">
-                        <a class="btn btn-secondary" href="{{ route('top') }}">
+                        <a class="btn btn-secondary" href="{{ route('nba') }}">
                             キャンセル
                         </a>
 

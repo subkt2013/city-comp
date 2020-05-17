@@ -44,7 +44,7 @@
             @endif
         </div>
         @else
-        <form class="mb-4" method="POST" action="{{ route('comments.store') }}">
+        <form class="mb-4" method="POST" action="{{ route('comments.nba.store') }}">
             @csrf
             <input
             name="post_id"

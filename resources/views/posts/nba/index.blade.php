@@ -20,7 +20,7 @@
         </div>
     @else
         <div class="mb-4">
-            <a href="{{ route('posts.create') }}" class="btn btn-primary">
+            <a href="{{ route('posts.nba.create') }}" class="btn btn-primary">
                 投稿を新規作成する
             </a>
         </div>
@@ -40,7 +40,7 @@
 
         @foreach ($posts as $post)
             <div class="card ">
-                <a class="card-body" href="{{ route('posts.show', ['post' => $post]) }}">
+                <a class="card-body" href="{{ route('posts.nba.show', ['post' => $post]) }}">
                     {{$post->title}}
                 </a>
                 <div class="card-footer">
