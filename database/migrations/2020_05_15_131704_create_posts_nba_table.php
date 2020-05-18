@@ -13,7 +13,7 @@ class CreatePostsNbaTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts_nba', function (Blueprint $table) {
+        Schema::create('nba_posts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('contributor_name');
             $table->string('title',50);

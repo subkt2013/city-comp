@@ -45,7 +45,7 @@
                 </a>
                 <div class="card-footer">
                     投稿日時{{$post->created_at}}
-                    コメント数{{$post->comments->count()}}
+                    コメント数{{$post->nba_comments->count()}}
                     投稿者{{$post->contributor_name}}
                 </div>
             </div>

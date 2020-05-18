@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\PostNBA;
+use App\NbaPost;
 
-class CommentsNBAController extends Controller
+
+class NbaCommentsController extends Controller
 {
     public function store(Request $request)
     {
@@ -17,8 +18,8 @@ class CommentsNBAController extends Controller
             'commenter_name' => 'required|nullable',
         ]);
         //post_id_nbaを変更
-        $post = PostNBA::findOrFail($params['post_id_nba']);
-        $post->comments()->create($params);
+        $post = NbaPost::findOrFail($params['post_id_nba']);
+        $post->nba_comments()->create($params);
 
         return redirect()->route('posts.nba.show', ['post' => $post]);
     }

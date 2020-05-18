@@ -3,17 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post;
-use App\PostNBA;
+use App\NbaPost;
 
 
-class PostsNBAController extends Controller
+class NbaPostsController extends Controller
 {
 
 
     public function index()
     {
-        $posts = PostNBA::with(['comments_nba'])->orderBy('created_at', 'desc')->paginate(10);
+        $posts = NbaPost::with(['nba_comments'])->orderBy('created_at', 'desc')->paginate(10);
 
         return view('posts.nba.index',['posts'=>$posts]);
     }
@@ -31,14 +30,14 @@ class PostsNBAController extends Controller
             'body' => 'required',
         ]);
 
-        PostNBA::create($params);
+        NbaPost::create($params);
 
-        return redirect()->route('nba');
+        return redirect()->route('posts.nba.index');
     }
 
     public function show($post_id)
     {
-        $post = PostNBA::findOrFail($post_id);
+        $post = NbaPost::findOrFail($post_id);
 
         return view('posts.nba.show', [
             'post' => $post,
@@ -47,7 +46,7 @@ class PostsNBAController extends Controller
 
     public function edit($post_id)
 {
-    $post = PostNBA::findOrFail($post_id);
+    $post = NbaPost::findOrFail($post_id);
 
     return view('posts.nba.edit', [
         'post' => $post,
@@ -62,7 +61,7 @@ public function update($post_id, Request $request)
         'body' => 'required|max:2000',
     ]);
 
-    $post = PostNBA::findOrFail($post_id);
+    $post = NbaPost::findOrFail($post_id);
     $post->fill($params)->save();
 
     return redirect()->route('posts.nba.show', ['post' => $post]);
@@ -70,14 +69,14 @@ public function update($post_id, Request $request)
 
 public function destroy($post_id)
 {
-    $post = PostNBA::findOrFail($post_id);
+    $post = NbaPost::findOrFail($post_id);
 
     \DB::transaction(function () use ($post) {
-        $post->comments()->delete();
+        $post->nba_comments()->delete();
         $post->delete();
     });
 
-    return redirect()->route('nba');
+    return redirect()->route('posts.nba.index');
 }
 
 }

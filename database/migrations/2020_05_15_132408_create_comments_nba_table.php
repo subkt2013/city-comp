@@ -13,13 +13,13 @@ class CreateCommentsNbaTable extends Migration
      */
     public function up()
     {
-        Schema::create('comments_nba', function (Blueprint $table) {
+        Schema::create('nba_comments', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('post_id_nba');
             $table->string('commenter_name');
             $table->text('body');
             $table->timestamps();
-            $table->foreign('post_id_nba')->references('id')->on('posts_nba');
+            $table->foreign('post_id_nba')->references('id')->on('nba_posts');
         });
     }
 
@@ -30,6 +30,6 @@ class CreateCommentsNbaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comments_nba');
+        Schema::dropIfExists('nba_comments');
     }
 }

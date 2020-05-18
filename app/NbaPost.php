@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class PostNBA extends Model
+class NbaPost extends Model
 {
     protected $fillable =[
         'contributor_name',
@@ -12,7 +12,7 @@ class PostNBA extends Model
         'body',
     ];
 
-    public function comments(){
-        return $this -> hasMany('App\CommentNBA');
+    public function nba_comments(){
+        return $this -> hasMany('App\NbaComment');
     }
 }

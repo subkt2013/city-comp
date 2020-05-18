@@ -53,7 +53,7 @@
                     >
 
                     <div class="mt-5">
-                        <a class="btn btn-secondary" href="{{ route('nba') }}">
+                        <a class="btn btn-secondary" href="{{ route('posts.nba.index') }}">
                             キャンセル
                         </a>
 
