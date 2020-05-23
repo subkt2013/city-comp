@@ -15,11 +15,11 @@ class CreateCommentsNbaTable extends Migration
     {
         Schema::create('nba_comments', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('post_id_nba');
+            $table->unsignedInteger('nba_post_id');
             $table->string('commenter_name');
             $table->text('body');
             $table->timestamps();
-            $table->foreign('post_id_nba')->references('id')->on('nba_posts');
+            $table->foreign('nba_post_id')->references('id')->on('nba_posts');
         });
     }
 

@@ -40,7 +40,8 @@ Route::group(['prefix' => '/nba'],function(){
 
 //書き方をpostに合わせる nbapostのように１ずつ定義する
 //Route::resource('nba_comments', 'NbaCommentsController', ['only' => ['store']])->name('comments.nba.store');
-Route::post('nba_comments', 'NbaCommentsController@store')->name('comments.nba.store');
+//Route::post('nba_comments', 'NbaCommentsController@store')->name('comments.nba.store');
+Route::resource('nba_comments', 'NbaCommentsController', ['only' => ['store']]);
 
 //認証
 Auth::routes();

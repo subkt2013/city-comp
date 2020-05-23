@@ -44,12 +44,17 @@
             @endif
         </div>
         @else
-        <form class="mb-4" method="POST" action="{{ route('comments.nba.store') }}">
+        <form class="mb-4" method="POST" action="{{ route('nba_comments.store') }}">
             @csrf
             <input
-            name="post_id"
+            name="id"
             type="hidden"
             value="{{ $post->id }}"
+            >
+            <input
+            name="nba_post_id"
+            type="hidden"
+            value="{{ $post->nba_post_id }}"
             >
             <input
             name="commenter_name"

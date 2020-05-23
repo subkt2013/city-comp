@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class NbaComment extends Model
 {
     protected $fillable = [
-        'post_id_nba',
+        'nba_post_id',
         'body',
         'commenter_name',
     ];

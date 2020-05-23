@@ -3,22 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\NbaPost;
-
 
 class NbaCommentsController extends Controller
 {
     public function store(Request $request)
     {
         $params = $request->validate([
-        //post_id_nbaを変更
-            'post_id_nba' => 'required',
+            'nba_post_id' => 'required|exists:nba_posts,id',
             'body' => 'required|max:2000',
             'commenter_name' => 'required|nullable',
         ]);
-        //post_id_nbaを変更
-        $post = NbaPost::findOrFail($params['post_id_nba']);
+        //nba_post_idを変更
+        $post = NbaPost::findOrFail($params['nba_post_id']);
         $post->nba_comments()->create($params);
 
         return redirect()->route('posts.nba.show', ['post' => $post]);
