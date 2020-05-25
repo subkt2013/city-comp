@@ -46,6 +46,10 @@ Route::resource('nba_comments', 'NbaCommentsController', ['only' => ['store']]);
 //認証
 Auth::routes();
 
+//gemseeの機能を移植
+
+
+
 
 /* 前のテスト開発
 Route::get('/inquiry', function () {
