@@ -48,22 +48,3 @@ Auth::routes();
 
 //gemseeの機能を移植
 
-
-
-
-/* 前のテスト開発
-Route::get('/inquiry', function () {
-    return view('inquiry');
-});
-
-Route::get('/project', function () {
-    return view('project');
-});
-
-Route::get('/detail', function () {
-    return view('detail');
-});
-*/
-
-//authのライブラリを仕様したときの/homeを封印
-//Route::get('/home', 'HomeController@index')->name('home');
