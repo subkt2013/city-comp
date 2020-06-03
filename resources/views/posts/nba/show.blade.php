@@ -47,14 +47,9 @@
         <form class="mb-4" method="POST" action="{{ route('nba_comments.store') }}">
             @csrf
             <input
-            name="id"
-            type="hidden"
-            value="{{ $post->id }}"
-            >
-            <input
             name="nba_post_id"
             type="hidden"
-            value="{{ $post->nba_post_id }}"
+            value="{{ $post->id }}"
             >
             <input
             name="commenter_name"
