@@ -31,9 +31,7 @@
                           NBA
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else here</a>
+                          <a class="dropdown-item" href="{{ route('posts.nba.index') }}">NBA</a>
                         </div>
                       </li>
                     <li class="nav-item dropdown">
@@ -41,9 +39,7 @@
                           Bリーグ
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else here</a>
+                          <a class="dropdown-item" href="#">Bリーグ</a>
                         </div>
                       </li>
                     <li class="nav-item dropdown">
@@ -51,9 +47,7 @@
                         大学バスケ
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">大学バスケ</a>
                       </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -61,9 +55,7 @@
                           高校バスケ
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else here</a>
+                          <a class="dropdown-item" href="#">高校バスケ</a>
                         </div>
                       </li>
                     <li class="nav-item dropdown">
@@ -71,9 +63,7 @@
                           NCAA
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else here</a>
+                          <a class="dropdown-item" href="#">NCAA</a>
                         </div>
                       </li>
                   </ul>
