@@ -61,5 +61,10 @@ Route::resource('with_comments', 'WithCommentsController', ['only' => ['store']]
 //認証
 Auth::routes();
 
-//gemseeの機能を移植
+//管理者画面について
+Route::group(['prefix' => '/admin'],function(){
+    Route::get('/','AdminController@index')->name('admin.index');
+    Route::get('/posts/{user_id}','AdminController@show_posts')->name('admin.posts.show');
+
+});
 
