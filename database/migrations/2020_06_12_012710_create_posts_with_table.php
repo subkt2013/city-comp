@@ -14,7 +14,7 @@ class CreatePostsWithTable extends Migration
     public function up()
     {
         Schema::create('with_posts', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigInteger('id',true)->unsigned();
             $table->string('contributor_name');
             $table->string('title',50);
             $table->text('body');

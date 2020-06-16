@@ -56,6 +56,12 @@
             type="hidden"
             value="{{ Auth::user()->name  }}"
             >
+            <input
+            id="user_id"
+            name="user_id"
+            value="{{ Auth::user()->id }}"
+            type="hidden"
+            >
 
             <div class="form-group">
                 <label for="body">

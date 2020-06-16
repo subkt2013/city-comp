@@ -6,7 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class NbaComment extends Model
 {
+
+    protected $table = 'nba_comments';
+
     protected $fillable = [
+        'user_id',
         'nba_post_id',
         'body',
         'commenter_name',

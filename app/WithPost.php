@@ -6,7 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class WithPost extends Model
 {
+    protected $table = 'with_posts';
+
     protected $fillable =[
+        'user_id',
         'contributor_name',
         'title',
         'body',

@@ -14,12 +14,12 @@ class CreateCommentsNbaTable extends Migration
     public function up()
     {
         Schema::create('nba_comments', function (Blueprint $table) {
-            $table->increments('id');
-            $table->unsignedInteger('nba_post_id');
+            $table->bigInteger('id',true)->unsigned();
+            $table->bigInteger('nba_post_id')->unsigned();
             $table->string('commenter_name');
             $table->text('body');
             $table->timestamps();
-            $table->foreign('nba_post_id')->references('id')->on('nba_posts');
+            $table->foreign('nba_post_id','kycs_ibfk_2')->references('id')->on('nba_posts')->onUpdate('CASCADE')->onDelete('CASCADE');
         });
     }
 

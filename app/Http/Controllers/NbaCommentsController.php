@@ -10,6 +10,7 @@ class NbaCommentsController extends Controller
     public function store(Request $request)
     {
         $params = $request->validate([
+            'user_id'=> 'required',
             'nba_post_id' => 'required|exists:nba_posts,id',
             'body' => 'required|max:2000',
             'commenter_name' => 'required|nullable',

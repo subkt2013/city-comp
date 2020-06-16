@@ -51,6 +51,12 @@
                             value="{{ Auth::user()->name }}"
                             type="hidden"
                     >
+                    <input
+                            id="user_id"
+                            name="user_id"
+                            value="{{ Auth::user()->id }}"
+                            type="hidden"
+                    >
 
                     <div class="mt-5">
                         <a class="btn btn-secondary" href="{{ route('top') }}">

@@ -25,6 +25,7 @@ class NbaPostsController extends Controller
     public function store(Request $request)
     {
         $params = $request->validate([
+            'user_id'=> 'required',
             'contributor_name' => 'required',
             'title' => 'required|unique:posts|max:255',
             'body' => 'required',

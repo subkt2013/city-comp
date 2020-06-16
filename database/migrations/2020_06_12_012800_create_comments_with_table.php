@@ -14,12 +14,12 @@ class CreateCommentsWithTable extends Migration
     public function up()
     {
         Schema::create('with_comments', function (Blueprint $table) {
-            $table->increments('id');
-            $table->unsignedInteger('with_post_id');
+            $table->bigInteger('id',true)->unsigned();
+            $table->bigInteger('with_post_id')->unsigned();
             $table->string('commenter_name');
             $table->text('body');
             $table->timestamps();
-            $table->foreign('with_post_id')->references('id')->on('with_posts');
+            $table->foreign('with_post_id')->references('id')->on('with_posts')->onUpdate('CASCADE')->onDelete('CASCADE');
         });
     }
 
