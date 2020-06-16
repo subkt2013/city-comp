@@ -14,19 +14,14 @@ class AdminController extends Controller
 
         return view('admin.index',['users'=> $users]);
     }
-        //再考
-        public function show_posts($user_id){
+    //再考
+    public function show_posts($user_id){
 
-            $posts = Post::where('user_id',$user_id );
+        //$get()を忘れずに!!;
+        $posts = Post::where('user_id',$user_id)->get();
+
+        return view('admin.show_posts',['posts'=> $posts]);
+
+    }
     
-            return  view('admin.show_posts',['posts'=> $posts]);
-    
-        }
-    
-        public function show_comments($id){
-            
-            $user = User::findOrFail($id);
-            return null;
-    
-        }   
 }

@@ -64,7 +64,6 @@ Auth::routes();
 //管理者画面について
 Route::group(['prefix' => '/admin'],function(){
     Route::get('/','AdminController@index')->name('admin.index');
-    Route::get('/posts/{user_id}','AdminController@show_posts')->name('admin.posts.show');
-
+    Route::get('/posts/{user_id}','AdminController@show_posts')->name('admin.show_posts');
 });
 

@@ -15,7 +15,8 @@
                 <td>{{ $user->id }}</td>
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->email }}</td>
-                <td>投稿内容へのボタン</td>
+                <td><a href="/admin/posts/{{ $user->id }}" class="btn btn-primary">
+                投稿一覧</a></td>
                 <td>削除ボタン</td>
             </tr>
             @endforeach
