@@ -16,7 +16,7 @@ class AddUserIdsToCommentsTable extends Migration
         Schema::table('comments', function (Blueprint $table) {
             //user_idの追加
             $table->bigInteger('user_id')->unsigned()->after('id');
-            $table->foreign('user_id')->references('id')->on('users')->onUpdate('CASCADE')->onDelete('CASCADE');
+            //$table->foreign('user_id')->references('id')->on('users')->onUpdate('CASCADE')->onDelete('CASCADE');
         });
     }
 
@@ -27,8 +27,6 @@ class AddUserIdsToCommentsTable extends Migration
      */
     public function down()
     {
-        Schema::table('comments', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('comments');
     }
 }
