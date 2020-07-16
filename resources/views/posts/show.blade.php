@@ -32,7 +32,7 @@
                     @endforelse
                 </section>
             </div>
-        @guest
+      
         <form class="mb-4" method="POST" action="{{ route('comments.store') }}">
             @csrf
             <input
@@ -63,9 +63,11 @@
                 <button type="submit" class="btn btn-primary">
                 コメントする
                 </button>
+                <a class="btn btn-secondary" href="{{ route('top') }}">
+                戻る
+                </a>
             </div>
         </form>
-
-        @endguest
+        
     </div>
 @endsection

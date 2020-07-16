@@ -47,13 +47,12 @@
                     </div>
 
                     <div class="mt-5">
-                        <a class="btn btn-secondary" href="{{ route('top') }}">
-                            戻る
-                        </a>
-
                         <button type="submit" class="btn btn-primary">
                             投稿する
                         </button>
+                        <a class="btn btn-secondary" href="{{ route('top') }}">
+                            戻る
+                        </a>
                     </div>
                 </fieldset>
             </form>
