@@ -19,45 +19,12 @@
 <body>
   <header>
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light"> <a class="navbar-brand" href="/">Home</a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                NBA
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item" href="{{ route('posts.nba.index') }}">NBA</a> </div>
-            </li>
-            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              バスケ仲間募集
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item" href="{{ route('posts.with.index') }}">バスケ仲間募集</a> </div>
-            </li>
-            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        大学バスケ
-        </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item" href="#">大学バスケ</a> </div>
-            </li>
-            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        高校バスケ
-        </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item" href="#">高校バスケ</a> </div>
-            </li>
-            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        NCAA
-        </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item" href="#">NCAA</a> </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
       <div class="row">
         <div class="col-sm-12">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">広告をはる場所</h5>
-              <p class="card-text">このへんに広告を張ります</p> <a href="#" class="btn btn-primary">Go somewhere</a> </div>
+              <h5 class="card-title">zoom掲示板</h5>
+              <p class="card-text">zoom仲間やzoom飲み友だちを探すサイトです。お問い合わせは@ツイッターアカウントへ</div>
           </div>
         </div>
       </div>

@@ -33,34 +33,12 @@
                 </section>
             </div>
         @guest
-        <div class="mb-4">
-            <a href="{{ route('login') }}" class="btn btn-primary">
-                {{ __('Login') }}
-            </a>
-            @if (Route::has('register'))
-            <a href="{{ route('register') }}" class="btn btn-primary">
-                {{ __('Register') }}
-            </a>
-            @endif
-        </div>
-        @else
         <form class="mb-4" method="POST" action="{{ route('comments.store') }}">
             @csrf
             <input
             name="post_id"
             type="hidden"
             value="{{ $post->id }}"
-            >
-            <input
-            name="commenter_name"
-            type="hidden"
-            value="{{ Auth::user()->name  }}"
-            >
-            <input
-            id="user_id"
-            name="user_id"
-            value="{{ Auth::user()->id }}"
-            type="hidden"
             >
 
             <div class="form-group">

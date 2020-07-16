@@ -45,22 +45,10 @@
                             </div>
                         @endif
                     </div>
-                    <input
-                            id="contributor_name"
-                            name="contributor_name"
-                            value="{{ Auth::user()->name }}"
-                            type="hidden"
-                    >
-                    <input
-                            id="user_id"
-                            name="user_id"
-                            value="{{ Auth::user()->id }}"
-                            type="hidden"
-                    >
 
                     <div class="mt-5">
                         <a class="btn btn-secondary" href="{{ route('top') }}">
-                            キャンセル
+                            戻る
                         </a>
 
                         <button type="submit" class="btn btn-primary">
