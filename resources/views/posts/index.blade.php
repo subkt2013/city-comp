@@ -7,18 +7,17 @@
                 掲示板に投稿する
             </a>
     </div>
-        
-            <div class="f-container">
+            <div class="row">
             @foreach ($posts as $post)
-                <div class="f-item">
-                    <div class="card mb-4">
-                        <div class="card-header">投稿のタイトル</div>
-                        <a class="card-body" href="{{ route('posts.show', ['post' => $post]) }}">
-                            {{$post->title}}
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-header"><a href="{{ route('posts.show', ['post' => $post]) }}"> {{$post->title}}</a></div>
+                        <a class="card-body">
+                            {{$post->body}}
                         </a>
                         <div class="card-footer">
-                            投稿日時{{$post->created_at}}
-                            コメント数{{$post->comments->count()}}
+                            性別: {{$post->gender}} <br>
+                            投稿日時: {{$post->created_at}}
                         </div>
                     </div>
                 </div>

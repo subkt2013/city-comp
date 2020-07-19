@@ -21,6 +21,35 @@
                             value="{{ old('title') }}"
                             type="text"
                         >
+                        <label for="gender">
+                            性別
+                        </label>
+                        <p>
+                        <input id="gender" name="gender" type="radio" value="男"> 男
+                        <input id="gender" name="gender" type="radio" value="女"> 女
+                        <input id="gender" name="gender" type="radio" value="その他">その他
+                        </p>
+                        <label for="title">
+                            名前
+                        </label>
+                        <input
+                            id="name"
+                            name="name"
+                            class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}"
+                            value="{{ old('title') }}"
+                            type="text"
+                        >
+                        <label for="title">
+                            招待URL
+                        </label>
+                        <input
+                            id="url"
+                            name="url"
+                            class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}"
+                            value="{{ old('title') }}"
+                            type="text"
+                        >
+
                         @if ($errors->has('title'))
                             <div class="invalid-feedback">
                                 {{ $errors->first('title') }}

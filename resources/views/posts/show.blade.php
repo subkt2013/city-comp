@@ -3,9 +3,18 @@
 @section('content')
     <div class="container mt-4">
             <div class="border p-4">
-                <h1 class="h5 mb-4">
+                <h5 class="h5 mb-4">
                     {{ $post->title }}
-                </h1>
+                </h5>
+                <p class="h5 mb-4">
+                    {{ $post->gender }}
+                </p>
+                <p class="h5 mb-4">
+                    {{ $post->name }}
+                </p>
+                <p class="h5 mb-4">
+                    <a href="{{ $post->url }}"> {{ $post->url }}</a>
+                </p>
                 <p class="mb-5">
                     {!! nl2br(e($post->body)) !!}
                 </p>

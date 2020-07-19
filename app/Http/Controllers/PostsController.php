@@ -25,8 +25,13 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         $params = $request->validate([
-            'title' => 'required|unique:posts|max:255',
+            'title' => 'required|unique:posts|max:50',
             'body' => 'required',
+            'gender' => 'required',
+            'name' => 'required',
+            'title' => 'required',
+            'url' => 'required',
+
         ]);
 
         Post::create($params);
