@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="mb-4">
-    タグ <br>
+        <br>
             <a href="{{ route('posts.create') }}" class="btn btn-primary">
                 掲示板に投稿する
             </a>
