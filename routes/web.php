@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/','PostsController@index')->name('top');
+//規約・ポリシー
+Route::get('/terms','TermsController@index')->name('terms');
 
 //切り分けてルートに名前をつける
 //Route::resource('posts','PostsController',['only' => ['create', 'store','show','edit','update','destroy']]);
