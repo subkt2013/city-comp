@@ -18,6 +18,11 @@
                 <p class="mb-5">
                     {!! nl2br(e($post->body)) !!}
                 </p>
+                @isset($post -> tag)
+                <p class="p-2 mb-4 d-inline bg-secondary text-white">
+                    {{ config('const.tag')[$post -> tag ]}}
+                </p>
+                @endisset
             </div>
             <div class="mt-4">
                 <a class="btn btn-secondary" href="{{ route('top') }}">
