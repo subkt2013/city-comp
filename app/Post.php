@@ -16,6 +16,7 @@ class Post extends Model
         'name',
         'title',
         'url',
+        'tag',
     ];
 
     public function comments(){

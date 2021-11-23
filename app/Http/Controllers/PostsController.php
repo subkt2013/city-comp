@@ -31,7 +31,7 @@ class PostsController extends Controller
             'name' => 'required',
             'title' => 'required',
             'url' => 'required',
-
+            'tag' => 'nullable|numeric',
         ]);
 
         Post::create($params);

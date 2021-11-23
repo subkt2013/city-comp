@@ -49,6 +49,17 @@
                             value="{{ old('title') }}"
                             type="text"
                         >
+                        <label for="title">
+                            タグ
+                        </label>
+                        <p>
+                        <select id="tag" name="tag" class="form-select" aria-label="Default select example">
+                            <option selected></option>
+                            <option value="1">通話・雑談</option>
+                            <option value="2">ゲーム</option>
+                            <option value="3">寝落ち</option>
+                        </select>
+                        </p>
 
                         @if ($errors->has('title'))
                             <div class="invalid-feedback">
