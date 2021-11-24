@@ -53,7 +53,7 @@
                             タグ
                         </label>
                         <p>
-                        <select id="tag" name="tag" class="form-select" aria-label="Default select example">
+                        <select id="tag_id" name="tag_id" class="form-select" aria-label="Default select example">
                             <option selected></option>
                             <option value="1">通話・雑談</option>
                             <option value="2">ゲーム</option>

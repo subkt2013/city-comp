@@ -18,9 +18,9 @@
                 <p class="mb-5">
                     {!! nl2br(e($post->body)) !!}
                 </p>
-                @isset($post -> tag)
+                @isset($post -> tag_id)
                 <p class="p-2 mb-4 d-inline bg-secondary text-white">
-                    {{ config('const.tag')[$post -> tag ]}}
+                    {{ config('const.tag')[$post -> tag_id ]}}
                 </p>
                 @endisset
             </div>
