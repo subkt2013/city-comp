@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
-
+use App\Tag;
 
 class PostsController extends Controller
 {
@@ -13,7 +13,8 @@ class PostsController extends Controller
     public function index()
     {
         $posts = Post::with(['comments'])->orderBy('created_at', 'desc')->paginate(12);
-        return view('posts.index',['posts'=>$posts]);
+        $tags = Tag::all();
+        return view('posts.index',['posts'=>$posts,'tags'=>$tags]);
     }
 
     public function create()

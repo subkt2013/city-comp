@@ -7,18 +7,6 @@
             掲示板に投稿する
         </a>
     </div>
-    <div class="mb-4">
-        <label for="title">
-            タグ
-        </label>
-        <ul class="tag-list" id="tag-menu-list">
-        @foreach ($tags as $tag)
-        <li style="display: inline-block">
-            <a href="{{route('tags.show',$tag->id)}}" class="p-2 mb-4 d-inline bg-secondary text-white">{{ config('const.tag')[$tag -> id]}}</a>
-        </li>
-        @endforeach
-        </ul>
-    </div>
     <div class="row">
         @foreach ($posts as $post)
             <div class="col-sm-4">
@@ -34,6 +22,11 @@
                 </div>
             </div>
         @endforeach
+    </div>
+    <div class="mt-4">
+        <a class="btn btn-secondary" href="{{ route('top') }}">
+        戻る
+        </a>
     </div>
     <div class="d-flex justify-content-center mb-5">
         {{ $posts->links() }}

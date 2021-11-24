@@ -28,6 +28,7 @@ Route::group(['prefix' => '/posts'],function(){
     Route::delete('/{post}', 'PostsController@delete')->name('posts.delete');
 });
 Route::resource('comments', 'CommentsController', ['only' => ['store']]);
+Route::resource('/tags', 'TagsController', ['only' => ['show']]);
 
 //認証
 Auth::routes();
