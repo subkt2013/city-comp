@@ -32,7 +32,7 @@
         <div class="col-sm-12">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">zoom掲示板</h5>
+              <h5 class="card-title"><a href="{{route('top')}}">zoom掲示板</a></h5>
               <p class="card-text">zoom仲間やzoom飲み友だちを探すサイトです。お問い合わせは<a href="https://twitter.com/zoom20021449">zoom掲示板Twitterアカウント</a> へ</div>
           </div>
         </div>
