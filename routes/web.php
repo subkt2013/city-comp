@@ -17,6 +17,13 @@ Route::get('/','PostsController@index')->name('top');
 //規約・ポリシー
 Route::get('/terms','TermsController@index')->name('terms');
 
+Route::group(['prefix' => '/terms'],function(){
+    Route::get('/','TermsController@index')->name('terms');
+    Route::get('/privacy','TermsController@index_privacy')->name('terms.privacy');
+});
+
+
+
 //切り分けてルートに名前をつける
 //Route::resource('posts','PostsController',['only' => ['create', 'store','show','edit','update','destroy']]);
 Route::group(['prefix' => '/posts'],function(){

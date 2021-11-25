@@ -10,4 +10,9 @@ class TermsController extends Controller
     {
         return view('terms.index');
     }
+
+    public function index_privacy()
+    {
+        return view('terms.privacy');
+    }
 }

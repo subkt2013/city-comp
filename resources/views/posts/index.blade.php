@@ -40,6 +40,7 @@
     </div>
     <footer>
         <div class="container"><a href="{{ route('terms') }}">規約</a> </div>
+        <div class="container"><a href="{{ route('terms.privacy') }}">プライバシーポリシー</a> </div>
     </footer>
 
 @endsection('content')
