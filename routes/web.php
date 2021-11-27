@@ -40,9 +40,9 @@ Route::resource('/tags', 'TagsController', ['only' => ['show']]);
 //認証
 Auth::routes();
 
-//管理者画面について
-Route::group(['prefix' => '/admin'],function(){
-    Route::get('/','AdminController@index')->name('admin.index');
-    Route::get('/posts/{user_id}','AdminController@show_posts')->name('admin.show_posts');
-});
+//管理者画面について 封印
+//Route::group(['prefix' => '/admin'],function(){
+//    Route::get('/','AdminController@index')->name('admin.index')->middleware('auth');
+//    Route::get('/posts/{user_id}','AdminController@show_posts')->name('admin.show_posts');
+//});
 
