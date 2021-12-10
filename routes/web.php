@@ -13,15 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//トップページ
 Route::get('/','PostsController@index')->name('top');
 //規約・ポリシー
 Route::get('/terms','TermsController@index')->name('terms');
-
 Route::group(['prefix' => '/terms'],function(){
     Route::get('/','TermsController@index')->name('terms');
     Route::get('/privacy','TermsController@index_privacy')->name('terms.privacy');
 });
-
+//チャット画面
+Route::resource('chats', 'ChatsController', ['only' => ['index','show']]);
 
 
 //切り分けてルートに名前をつける
@@ -35,6 +36,7 @@ Route::group(['prefix' => '/posts'],function(){
     Route::delete('/{post}', 'PostsController@delete')->name('posts.delete');
 });
 Route::resource('comments', 'CommentsController', ['only' => ['store']]);
+//タグ管理
 Route::resource('/tags', 'TagsController', ['only' => ['show']]);
 
 //認証
