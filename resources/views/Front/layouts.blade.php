@@ -34,6 +34,9 @@
             <div class="card-body">
               <h5 class="card-title"><a href="{{route('top')}}">zoom掲示板</a></h5>
               <p class="card-text">zoom仲間やzoom飲み友だちを探すサイトです。お問い合わせは<a href="https://twitter.com/zoom20021449">zoom掲示板Twitterアカウント</a> へ</div>
+                <a href="https://px.a8.net/svt/ejp?a8mat=3N65ML+67V10A+4GN2+BY641" rel="nofollow">
+                <img border="0" width="120" height="60" alt="" src="https://www22.a8.net/svt/bgt?aid=220316925376&wid=002&eno=01&mid=s00000020819002007000&mc=1"></a>
+                <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=3N65ML+67V10A+4GN2+BY641" alt="">
           </div>
         </div>
       </div>
