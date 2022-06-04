@@ -17,6 +17,9 @@ class Post extends Model
         'title',
         'url',
         'tag_id',
+        'skype',
+        'kakao',
+        
     ];
 
     public function comments(){

@@ -15,6 +15,11 @@
                 <p class="h5 mb-4">
                     <a href="{{ $post->url }}"> {{ $post->url }}</a>
                 </p>
+                <p class="h5 mb-4">
+                    <!-- コピー対象要素とコピーボタン -->
+                    <input id="copyTarget" type="text" value="{{ $post->skype }} " readonly>
+                    <button onclick="copyToClipboard()">Copy text</button>
+                </p>
                 <p class="mb-5">
                     {!! nl2br(e($post->body)) !!}
                 </p>

@@ -50,6 +50,16 @@
                             type="text"
                         >
                         <label for="title">
+                            Skype ID
+                        </label>
+                        <input
+                            id="skype"
+                            name="skype"
+                            class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}"
+                            value="{{ old('title') }}"
+                            type="text"
+                        >        
+                        <label for="title">
                             タグ
                         </label>
                         <p>

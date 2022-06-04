@@ -30,7 +30,9 @@ class PostsController extends Controller
             'gender' => 'required',
             'name' => 'required',
             'title' => 'required',
-            'url' => 'required',
+            'url' => 'nullable',
+            'skype' => 'nullable',
+            'kakao' => 'nullable',
             'tag_id' => 'nullable|numeric',
         ]);
 
