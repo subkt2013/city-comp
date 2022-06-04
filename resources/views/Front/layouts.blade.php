@@ -16,7 +16,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <meta name="description" content="zoom仲間やzoom飲み友だちを探すサイトです。">
+    <meta name="description" content="zoom仲間やskype仲間やcacao仲間や飲み友だちを探すサイトです。">
     <title>zoom掲示板</title>
     <link
         rel="stylesheet"
@@ -35,7 +35,7 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title"><a href="{{route('top')}}">zoom掲示板</a></h5>
-              <p class="card-text">zoom仲間やzoom飲み友だちを探すサイトです。お問い合わせは<a href="https://twitter.com/zoom20021449">zoom掲示板Twitterアカウント</a> へ</div>
+              <p class="card-text">zoom仲間やskype仲間やcacao仲間や飲み友だちを探すサイトです。お問い合わせは<a href="https://twitter.com/zoom20021449">zoom掲示板Twitterアカウント</a> へ</div>
           </div>
         </div>
       </div>
