@@ -29,7 +29,7 @@
                         <input id="gender" name="gender" type="radio" value="女"> 女
                         <input id="gender" name="gender" type="radio" value="その他">その他
                         </p>
-                        <label for="title">
+                        <label for="name">
                             名前
                         </label>
                         <input
@@ -39,14 +39,14 @@
                             value="{{ old('title') }}"
                             type="text"
                         >
-                        <label for="title">
+                        <label for="url">
                             招待URL
                         </label>
                         <input
                             id="url"
                             name="url"
-                            class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}"
-                            value="{{ old('title') }}"
+                            class="form-control {{ $errors->has('url') ? 'is-invalid' : '' }}"
+                            value="{{ old('url') }}"
                             type="text"
                         >
                         <label for="title">
@@ -55,8 +55,8 @@
                         <input
                             id="skype"
                             name="skype"
-                            class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}"
-                            value="{{ old('title') }}"
+                            class="form-control {{ $errors->has('skype') ? 'is-invalid' : '' }}"
+                            value="{{ old('skype') }}"
                             type="text"
                         >        
                         <label for="title">
