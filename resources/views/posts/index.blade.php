@@ -8,19 +8,10 @@
         </a>
         @guest
     
-                <a href="{{ route('login') }}" class="btn btn-link">
-                    ログイン
-                </a>
+
             
         @else
-                <a class="btn btn-link" href="{{ route('logout') }}" 
-                    onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
-                    ログアウト
-                </a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" >
-                    @csrf
-                </form>
+
         @endguest
         <br>
     <div class="mb-4">
