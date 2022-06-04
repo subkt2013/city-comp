@@ -17,6 +17,7 @@
                 </p>
                 <p class="h5 mb-4">
                     <!-- コピー対象要素とコピーボタン -->
+                    Skype ID
                     <input id="copyTarget" type="text" value="{{ $post->skype }} " readonly>
                     <button onclick="copyToClipboard()">Copy text</button>
                 </p>
