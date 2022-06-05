@@ -40,7 +40,7 @@
                             type="text"
                         >
                         <label for="url">
-                            招待URL
+                            Zoom 招待URL
                         </label>
                         <input
                             id="url"
