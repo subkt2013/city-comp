@@ -19,7 +19,7 @@
                     <!-- コピー対象要素とコピーボタン -->
                     Skype ID
                     <input id="copyTarget" type="text" value="{{ $post->skype }} " readonly>
-                    <button onclick="copyToClipboard()">Copy text</button>
+                    <button onclick="copyToClipboard()">コピー</button>
                 </p>
                 <p class="mb-5">
                     {!! nl2br(e($post->body)) !!}
